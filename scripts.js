@@ -1,21 +1,22 @@
 /*
-7) Desenvolva um algoritmo que leia 3 valores inteiros e os apresente em ordem descrecente.
+1) O sistema de avaliação de determinada disciplina, é composto por três provas. A primeira
+prova tem peso 4, a Segunda tem peso 3 e a terceira prova tem peso 3. Faça um algoritmo
+para calcular a média final de um aluno desta disciplina. Caso a média seja maior ou igual a
+7 mostre APROVADO, se a média for entre 5 e 7, mostre em RECUPERAÇÃO, e se for menor
+do que 5 mostre REPROVADO. 
 */
 
-var num1 = parseInt(prompt("Digite algum numero: "));
-var num2 = parseInt(prompt("Digite outro numero: "));
-var num3 = parseInt(prompt("Digite mais um numero: "));
+var nota1 = parseFloat(prompt("Digite sua primeira nota"));
+var nota2 = parseFloat(prompt("Digite sua segunda nota"));
+var nota3 = parseFloat(prompt("Digite sua terceira nota"));
 
-if (num1>=num2 && num1>=num3 && num2>=num3){
-    alert("Os valores que você digitou em ordem descrecente são: " + num1 + ", " + num2 + " e " + num3)
-}else if (num2>=num1 && num2>=num3 && num1>=num3){
-    alert("Os valores que você digitou em ordem descrecente são: " + num2 + ", " + num1 + " e " + num3)
-}else if (num3>=num1 && num3>=num2 && num1>=num2){
-    alert("Os valores que você digitou em ordem descrecente são: " + num3 + ", " + num1 + " e " + num2)
-}else if (num3>=num1 && num3>=num2 && num2>=num1){
-    alert("Os valores que você digitou em ordem descrecente são: " + num3 + ", " + num2 + " e " + num1)
-}else if (num1>=num2 && num1>=num3 && num3>=num2){
-    alert("Os valores que você digitou em ordem descrecente são: " + numa + ", " + num3 + " e " + num2)
-}else if (num2>=num1 && num2>=num3 && num3>=num1){
-    alert("Os valores que você digitou em ordem descrecente são: " + num2 + ", " + num3 + " e " + num1)
+var calc = (nota1 * 4) + (nota2 * 3) + (nota3 * 3);
+var resultado = calc / (4 + 3 + 3);
+
+if (resultado >= 7){
+    alert("Sua nota final é " + resultado + ", você esta APROVADO!");
+} else if (resultado > 5 && 7){
+    alert("Sua nota final é " + resultado + ", você esta de RECUPERAÇÂO!")
+} else if (resultado <= 5){
+    alert("Sua nota final é " + resultado + ", você esta REPROVADO!")
 }
